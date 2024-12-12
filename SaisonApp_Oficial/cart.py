@@ -1,6 +1,6 @@
 import reflex as rx
 
-def cart_page():
+def cart_page()->rx.Component:
     return rx.container(
         rx.vstack(
             rx.heading("Carrito de Compras"),

@@ -1,20 +1,23 @@
-"""Welcome to Reflex! This file outlines the steps to create a basic app."""
 import reflex as rx
-
-# Login en el archivo principal
-def login_page()-> rx.Component:
-    return rx.container(
-        rx.vstack(
-            rx.heading("Iniciar Sesión", size="lg"),
-            rx.input(placeholder="Correo electrónico"),
-            rx.input(placeholder="Contraseña", type="password"),
-            rx.button("Ingresar", on_click="/home"),
-            spacing="4",
-            align="center",
-        ),
-        padding="4",
-        center_content=True,
-    )
+from login import login_page 
+from home import home_page
+from cart import cart_page
+from ideas import ideas_page
+from categorias import categoria_page
+from search import search_page
+from reserva import reserva
+from products import products_page
 
 # Crear la aplicación
 app = rx.App()
+app.add_page()
+
+# Agregar las páginas
+app.add_page(login_page, route="/")
+app.add_page(home_page, route="/home")
+app.add_page(cart_page, route="/cart")
+app.add_page(ideas_page, route="/ideas")
+app.add_page(categoria_page, route="/categorias")
+app.add_page(search_page, route="/search")
+app.add_page(reserva, route="/reserva")
+app.add_page(products_page, route="/products")

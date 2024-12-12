@@ -1,6 +1,6 @@
 import reflex as rx
 
-def inspiration_page():
+def ideas_page()->rx.Component:
     return rx.container(
         rx.vstack(
             rx.heading("Inspiración"),

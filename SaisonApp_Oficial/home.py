@@ -1,6 +1,6 @@
 import reflex as rx
 
-def home_page():
+def home_page()->rx.Component:
     return rx.container(
         rx.vstack(
             rx.heading("Página Principal", size="lg"),
