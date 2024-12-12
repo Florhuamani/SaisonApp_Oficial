@@ -1,5 +1,6 @@
 import reflex as rx
-from login import login_page 
+
+from login import login_default
 from home import home_page
 from cart import cart_page
 from ideas import ideas_page
@@ -13,7 +14,7 @@ app = rx.App()
 app.add_page()
 
 # Agregar las páginas
-app.add_page(login_page, route="/")
+app.add_page(login_default, route="/")
 app.add_page(home_page, route="/home")
 app.add_page(cart_page, route="/cart")
 app.add_page(ideas_page, route="/ideas")
