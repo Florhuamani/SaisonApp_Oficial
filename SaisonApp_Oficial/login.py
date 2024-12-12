@@ -1,5 +1,5 @@
 import reflex as rx 
-def login_default() -> rx.Component:
+def login() -> rx.Component:
     return rx.card(
         rx.vstack(
             rx.center(
@@ -63,7 +63,7 @@ def login_default() -> rx.Component:
                 spacing="2",
                 width="100%",
             ),
-            rx.button("Sign in", size="3", width="100%"),
+            rx.button("Sign in", size="3", width="100%", on_click=rx.redirect("/home")),
             rx.center(
                 rx.text("New here?", size="3"),
                 rx.link("Sign up", href="#", size="3"),

@@ -1,20 +1,20 @@
 import reflex as rx
 
-from login import login_default
-from home import home_page
-from cart import cart_page
-from ideas import ideas_page
-from categorias import categoria_page
-from search import search_page
-from reserva import reserva
-from products import products_page
+from .login import login
+from .home import home_page
+from .cart import cart_page
+from .ideas import ideas_page
+from .categorias import categoria_page
+from .search import search_page
+from .reserva import reserva
+from .products import products_page
 
 # Crear la aplicación
 app = rx.App()
-app.add_page()
+
 
 # Agregar las páginas
-app.add_page(login_default, route="/")
+app.add_page(login, route="/")
 app.add_page(home_page, route="/home")
 app.add_page(cart_page, route="/cart")
 app.add_page(ideas_page, route="/ideas")
